@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Epignosis Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'ep-blue': '#003366', // Deep blue for wisdom and depth (Used for footer in screenshot)
+            'ep-blue-light': '#1E4A7B', // A slightly lighter shade of ep-blue for footer links if needed
+            'ep-gold': '#D4AF37', // Gold for divine and precious
+            'ep-light-bg': '#F0F4F8', // Light, calm background
+            'ep-dark-text': '#1E293B', // Slate 800 (Main text color)
+            
+            'ep-primary': '#0EA5E9', // Sky 500 - More vibrant primary
+            'ep-primary-hover': '#0284C7', // Sky 600 - Hover for primary
+            'ep-secondary': '#F59E0B', // Amber 500 - Secondary actions, accents
+            'ep-secondary-hover': '#D97706', // Amber 600 - Hover for secondary
+
+            'ep-success': '#10B981', // Emerald 500
+            'ep-error': '#EF4444', // Red 500
+            'ep-warning': '#F97316', // Orange 500
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Georgia', 'serif'],
+          },
+          borderRadius: {
+            'DEFAULT': '0.25rem',
+            'md': '0.375rem',
+            'lg': '0.5rem',
+            'xl': '0.75rem',
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+            'full': '9999px',
+          },
+          transitionTimingFunction: {
+            'DEFAULT': 'cubic-bezier(0.4, 0, 0.2, 1)', // Default ease-in-out
+            'in-out': 'cubic-bezier(0.4, 0, 0.2, 1)',
+          },
+          animation: {
+            fadeIn: 'fadeIn 0.5s ease-in-out',
+            fadeInUp: 'fadeInUp 0.6s ease-in-out',
+            modalEnter: 'modalEnter 0.3s ease-in-out',
+            menuSlideInRight: 'menuSlideInRight 0.3s ease-in-out',
+            menuSlideOutRight: 'menuSlideOutRight 0.3s ease-in-out',
+            chatMessageIn: 'chatMessageIn 0.3s ease-in-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            modalEnter: {
+              '0%': { opacity: '0', transform: 'scale(0.95)' },
+              '100%': { opacity: '1', transform: 'scale(1)' },
+            },
+            menuSlideInRight: {
+              '0%': { transform: 'translateX(100%)' },
+              '100%': { transform: 'translateX(0)' },
+            },
+            menuSlideOutRight: {
+              '0%': { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(100%)' },
+            },
+            chatMessageIn: {
+              '0%': { opacity: '0', transform: 'translateY(10px)'},
+              '100%': { opacity: '1', transform: 'translateY(0px)'},
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Georgia&display=swap" rel="stylesheet">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.2",
+    "@google/genai": "https://esm.sh/@google/genai@^1.4.0",
+    "react-markdown": "https://esm.sh/react-markdown@^10.1.0",
+    "remark-gfm": "https://esm.sh/remark-gfm@^4.0.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-ep-light-bg font-sans text-ep-dark-text">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
